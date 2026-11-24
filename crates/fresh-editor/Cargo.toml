@@ -242,7 +242,7 @@ chrono = { version = "0.4", default-features = false, features = ["std", "clock"
 clap = { version = "4.5", default-features = false, features = ["derive", "std", "help", "usage", "error-context"], optional = true }
 # tracing is always needed for logging throughout the codebase
 tracing = { workspace = true }
-tracing-subscriber = { version = "0.3", features = ["env-filter"], optional = true }
+tracing-subscriber = { version = "0.3.20", features = ["env-filter"], optional = true }
 
 lsp-types = { workspace = true, optional = true }
 tokio = { version = "1.51.6", features = ["fs", "io-util", "process", "rt", "rt-multi-thread", "sync", "time", "macros"], optional = true }

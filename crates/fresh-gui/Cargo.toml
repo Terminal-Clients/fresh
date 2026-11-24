@@ -24,7 +24,7 @@ anyhow = { workspace = true }
 # Logging
 tracing = { workspace = true }
 # Async runtime for wgpu init (needs rt-multi-thread for Runtime::new())
-tokio = { version = "1.49", features = ["rt", "rt-multi-thread"] }
+tokio = { version = "1.51.6", features = ["rt", "rt-multi-thread"] }
 # JSON for menu action args
 serde_json = { workspace = true }
 # PNG decoding for window icon (already a transitive dep via ratatui-wgpu)

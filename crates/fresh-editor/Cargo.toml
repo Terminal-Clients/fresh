@@ -245,7 +245,7 @@ tracing = { workspace = true }
 tracing-subscriber = { version = "0.3", features = ["env-filter"], optional = true }
 
 lsp-types = { workspace = true, optional = true }
-tokio = { version = "1.49", features = ["fs", "io-util", "process", "rt", "rt-multi-thread", "sync", "time", "macros"], optional = true }
+tokio = { version = "1.51.6", features = ["fs", "io-util", "process", "rt", "rt-multi-thread", "sync", "time", "macros"], optional = true }
 async-trait = { version = "0.1", optional = true }
 
 ignore = { version = "0.4", default-features = false, optional = true }

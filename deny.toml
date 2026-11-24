@@ -32,6 +32,13 @@ ignore = [
     { id = "RUSTSEC-2026-0192", reason = "ttf-parser, via winit's sctk-adwaita and ratatui-wgpu (GUI build only)" },
     { id = "RUSTSEC-2026-0206", reason = "rustybuzz, via ratatui-wgpu (GUI build only)" },
     { id = "RUSTSEC-2026-0543", reason = "chrono, used directly and via trash (Linux/BSD); no maintained drop-in yet, migrate to jiff when trash drops it" },
+
+    # Not listed below on purpose: glib (GHSA-wrw7-89jp-8q8g, fixed in 0.20) only
+    # appears in Cargo.lock through muda's Linux-only gtk3 dependency. muda is a
+    # macOS-only dependency of fresh-gui, so the gtk3/glib branch is never
+    # resolved for any target above (`cargo tree -e all -i glib` matches nothing).
+    # Re-check when muda changes its Linux backend or fresh-gui starts using a
+    # menu on Linux.
 ]
 
 [sources]

@@ -44,7 +44,7 @@ ureq = { version = "3.1.4", default-features = false, features = [
     "rustls",
     "platform-verifier",
 ], optional = true }
-tar = { version = "0.4", optional = true }
+tar = { version = "0.4.46", optional = true }
 xz2 = { version = "0.1", optional = true }
 # gzip for the universal (musl) archive. Default backend is miniz_oxide —
 # pure Rust, unlike xz2 which links liblzma.

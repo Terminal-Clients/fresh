@@ -28,7 +28,6 @@ ignore = [
     # Unmaintained, not vulnerable; each waits on the crate that pulls it in.
     { id = "RUSTSEC-2024-0320", reason = "yaml-rust, via syntect; blocked on syntect moving to yaml-rust2" },
     { id = "RUSTSEC-2024-0370", reason = "proc-macro-error, build-time only, transitive" },
-    { id = "RUSTSEC-2024-0436", reason = "paste, build-time only, transitive" },
     { id = "RUSTSEC-2025-0141", reason = "bincode, transitive; no defect, only maintenance" },
     { id = "RUSTSEC-2026-0192", reason = "ttf-parser, via winit's sctk-adwaita and ratatui-wgpu (GUI build only)" },
     { id = "RUSTSEC-2026-0206", reason = "rustybuzz, via ratatui-wgpu (GUI build only)" },

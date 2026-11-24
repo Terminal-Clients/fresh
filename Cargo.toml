@@ -17,6 +17,8 @@ members = [
     "crates/fresh-js",
     "crates/fresh-quickjs-sys",
     "crates/fresh-js-macros",
+    # Compatibility shim used by the `[patch.crates-io]` entry below.
+    "crates/paste-compat",
 ]
 default-members = [
     "crates/fresh-editor",
@@ -271,3 +273,11 @@ debug = 1
 strip = false
 lto = false
 codegen-units = 16
+
+# `paste` itself is unmaintained (RUSTSEC-2024-0436). It reaches the graph only
+# through `metal` -> `wgpu-hal`, i.e. the macOS GUI backend, and nothing in
+# this workspace imports it directly. `pastey` is the maintained successor with
+# the same macros; this local shim keeps the `paste` crate name the transitive
+# dependency expects, so no forked dependency source is introduced.
+[patch.crates-io]
+paste = { path = "crates/paste-compat" }
